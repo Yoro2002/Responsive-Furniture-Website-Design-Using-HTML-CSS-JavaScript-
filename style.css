@@ -35,6 +35,21 @@ body {
     width: 100%;
 }
 
+/* Button */
+.btn {
+    background: var(--main-color);
+    padding: 15px 24px;
+    color: var(--bg-color);
+    font-size: 1rem;
+    font-weight: 500;
+    border-radius: 0.5rem;
+}
+
+.btn:hover {
+    background: var(--hover-color);
+    transition: 0.3s all linear;
+}
+
 /* Header */
 header {
     position: fixed;
@@ -140,4 +155,85 @@ header {
     background: var(--main-color);
     border-radius: 0.5rem;
     cursor: pointer;
+}
+
+/* Cart */
+.cart {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(255, 255, 255, 0.74);
+    backdrop-filter: blur(4.5px);
+    z-index: 106;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s ease;
+}
+
+.cart.active {
+    display: flex;
+}
+
+.cart-content {
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    margin: auto;
+    width: 100%;
+    padding: 20px;
+    row-gap: 1rem;
+}
+
+.cart-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cart-box img {
+    width: 100px;
+}
+
+.cart-text {
+    display: grid;
+}
+
+.cart-text h3 {
+    font-size: 1rem;
+}
+
+.cart-text span {
+    font-weight: 500;
+}
+
+.cart-box .bx {
+    font-size: 20px;
+    color: var(--text-color)
+}
+
+.cart-box bx:hover {
+    color: var(--main-color);
+}
+
+.total {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1.5rem;
+}
+
+.total h3 {
+    font-size: 1rem;
+}
+
+.total span {
+    font-weight: 500;
+}
+
+.cart-content .btn {
+    display: inline-flex;
+    justify-content: center;
 }
